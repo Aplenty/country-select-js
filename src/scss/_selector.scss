@@ -2,8 +2,7 @@
 	// need position on the container so the selected flag can be
 	// absolutely positioned over the input
 	position: relative;
-	// keep the input's default inline properties
-	display: inline-block;
+	display: block;
 
 	// paul irish says this is ok
 	// http://www.paulirish.com/2012/box-sizing-border-box-ftw/
@@ -169,12 +168,14 @@
 		}
 
 		.flag-dropdown {
-			right: auto;
+		//hack to make full input listen to click to open dropdown.
+			right: 0;
 			left: 0;
 		}
 
 		.selected-flag {
-			width: $selected-flag-arrow-width;
+		//hack to make full input listen to click to open dropdown.
+			width: 100%;
 		}
 	}
 
